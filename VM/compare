@@ -1,0 +1,5 @@
+make re && make clean
+./corewar $2 $3 $4 $5 -dump $1 > o
+./original $2 $3 $4 $5 -d $1 > or
+diff o or | cat -e
+rm o or
